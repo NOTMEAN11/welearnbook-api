@@ -46,7 +46,7 @@ export default async function ImagesRoute(fastify: FastifyInstance) {
     const images = files.map((file) => {
       return {
         name: file,
-        url: `http://localhost:4000/assets/${file}`,
+        url: `http://localhost:4000/slips/${file}`,
       };
     });
 

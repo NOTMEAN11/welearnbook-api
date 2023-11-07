@@ -16,7 +16,7 @@ export default async function UploadRoute(fastify: FastifyInstance) {
 
       await pump(
         data?.file,
-        fs.createWriteStream(`./public/${data?.filename}`)
+        fs.createWriteStream(`./public/images/${data?.filename}`)
       );
 
       return reply.status(200).send({ message: "File uploaded" });
