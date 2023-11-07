@@ -137,3 +137,7 @@ data
 
 # prisma 
 prisma/migrations
+
+# image uploads
+public/images/*
+public/slips/*
