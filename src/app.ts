@@ -17,7 +17,7 @@ function builder(opts = {}) {
     parseOptions: {},
   } as FastifyCookieOptions);
   app.register(import("@fastify/rate-limit"), {
-    max: 100,
+    max: 200,
     timeWindow: "1 minute",
   });
   app.register(import("@/plugins/auth"));
