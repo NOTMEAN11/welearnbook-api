@@ -19,7 +19,7 @@ export default async function ProductRoute(fastify: FastifyInstance) {
     "/categories/:slug",
     async (request: FastifyRequest<{ Params: { slug: string } }>, reply) => {
       const { slug } = request.params;
-      const Category = await fastify.db.category.findFirst({
+      const Category = await fastify.db.category.findFirstOrThrow({
         where: {
           slug,
         },
